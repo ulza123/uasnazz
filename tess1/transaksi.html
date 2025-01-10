@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Zw Finance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Aplikasi Simpan Pinjam">
+            <h1>Zw Finance</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-transaksi">
+        <h1>Transaksi</h1>
+        <p>Masukkan data transaksi Anda di bawah ini.</p>
+
+        <form id="transaksiForm">
+            <div class="form-group">
+                <label for="nama">Nama Transaksi</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama transaksi" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="kategori">Kategori</label>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="simpanan">Simpanan</option>
+                    <option value="pinjaman">Pinjaman</option>
+                    <option value="pembayaran">Pembayaran</option>
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <label for="jumlah">Jumlah</label>
+                <input type="number" id="jumlah" name="jumlah" placeholder="Masukkan jumlah transaksi" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="tanggal">Tanggal Transaksi</label>
+                <input type="date" id="tanggal" name="tanggal" required>
+            </div>
+        
+            <div class="form-group">
+                <button type="submit">Simpan Transaksi</button>
+            </div>
+        </form>
+        
+        <p id="message"></p>
+        
+    </section>
+
+    <section class="section-daftar-transaksi">
+        <h2>Daftar Transaksi</h2>
+        <p>Berikut adalah riwayat transaksi Anda:</p>
+
+        <table class="transaksi-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tanggal</th>
+                    <th>Jenis Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2025-01-01</td>
+                    <td>Setoran</td>
+                    <td>Rp 500,000</td>
+                    <td>Sukses</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2025-01-03</td>
+                    <td>Penarikan</td>
+                    <td>Rp 200,000</td>
+                    <td>Sukses</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2025-01-05</td>
+                    <td>Pinjaman</td>
+                    <td>Rp 1,000,000</td>
+                    <td>Menunggu</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        &copy; 2025 Zw Finance. All Rights Reserved.
+    </footer>
+    <script src="transaksi.js"></script>
+</body>
+</html>
